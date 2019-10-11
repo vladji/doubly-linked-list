@@ -5,13 +5,13 @@ describe('LinkedList', () => {
     describe('#constructor', () => {
         const list = new LinkedList();
 
-        it('assign 0 to this.length', () => {
+        it.only('assign 0 to this.length', () => {
             expect(list.length).to.equal(0);
         })
     });
 
     describe('#append', () => {
-        it('should assign any nodes to this._head and this._tail if list is empty', () => {
+        it.only('should assign any nodes to this._head and this._tail if list is empty', () => {
             const data = 42;
 
             const list = new LinkedList();
@@ -22,7 +22,7 @@ describe('LinkedList', () => {
             expect(list._head).to.be.an.instanceof(Node)
         });
 
-        it('should add new data to the end of list', () => {
+        it.only('should add new data to the end of list', () => {
             const list = new LinkedList();
 
             list.append(123);
@@ -36,7 +36,7 @@ describe('LinkedList', () => {
     });
     describe('#head', () => {
         const list = new LinkedList();
-        it('should return data from the this.head', () => {
+        it.only('should return data from the this.head', () => {
             const data = 13;
 
             list.append(data);
@@ -46,7 +46,7 @@ describe('LinkedList', () => {
     });
     describe('#tail', () => {
         const list = new LinkedList();
-        it('should return data from the this.tail', () => {
+        it.only('should return data from the this.tail', () => {
             const data = 31;
 
             list.append(data);
@@ -55,7 +55,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#at', () => {
-        it('should return Node.data by index', () => {
+        it.only('should return Node.data by index', () => {
             const list = new LinkedList();
 
             list.append(1);
@@ -69,7 +69,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#insertAt', () => {
-        it('should insert data by index', () => {
+        it.only('should insert data by index', () => {
             const list = new LinkedList();
             const data = 34;
             const position = 1;
@@ -82,7 +82,7 @@ describe('LinkedList', () => {
             expect(list.at(position)).to.equal(data);
         });
 
-        it ('shouldn\'t replace existing values', () => {
+        it.only('shouldn\'t replace existing values', () => {
             const list = new LinkedList();
             const position = 1;
             const data = 42;
@@ -98,7 +98,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#isEmpty', () => {
-        it('should return true if list is empty', () => {
+        it.only('should return true if list is empty', () => {
             const list = new LinkedList();
 
             expect(list.isEmpty()).to.be.true;
@@ -110,7 +110,7 @@ describe('LinkedList', () => {
     });
 
     describe('#clear', () => {
-        it('should clear the list', () => {
+        it.only('should clear the list', () => {
             const list = new LinkedList();
 
             list.append(32);
@@ -124,7 +124,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#deleteAt', () => {
-        it('should delete element by index', () => {
+        it.only('should delete element by index', () => {
             const list = new LinkedList();
 
             list.append(1);
@@ -139,7 +139,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#reverse', () => {
-        it('should reverse the list', () => {
+        it.only('should reverse the list', () => {
             const list = new LinkedList();
 
             list.append(1);
@@ -161,7 +161,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#indexOf', () => {
-        it('should return index of element if data is found', () => {
+        it.only('should return index of element if data is found', () => {
             const list = new LinkedList();
 
             list.append(3);
@@ -171,7 +171,7 @@ describe('LinkedList', () => {
             expect(list.indexOf(7)).to.equal(1);
         });
 
-        it('should return -1 if data not found', () => {
+        it.only('should return -1 if data not found', () => {
             const list = new LinkedList();
 
             list.append(7);
@@ -180,7 +180,7 @@ describe('LinkedList', () => {
         })
     });
     describe('chaining', () => {
-        it('append reverse deleteAt insertAt methods should be chainable', () => {
+        it.only('append reverse deleteAt insertAt methods should be chainable', () => {
             const list = new LinkedList();
 
             function fn() {
